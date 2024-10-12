@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gostaria de ir a um churrasco comigo?</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="cabecalho">
+        <h1>Gosataria de ir a um churrasco com minha familia hoje as 20:00 ??</h1>
+    </div>
+    <div id="container-central">
+        <div class="container">
+            <button id="sim">Sim</button>
+            <button id="nao">Não</button>
+        </div>
+    </div>
+    <script>
+        const simButton = document.getElementById('sim');
+
+        // Adiciona um evento de clique no botão "Sim"
+        simButton.addEventListener('click', () => {
+            // Redireciona o usuário para o vídeo do YouTube
+            window.location.href = 'https://www.youtube.com/watch?v=3GwjfUFyY6M';
+        });
+
+        // Função para o botão "Não" se mover
+        const naoButton = document.getElementById('nao');
+
+        naoButton.addEventListener('mouseover', () => {
+            // Define uma nova posição aleatória para o botão "Não" dentro do container
+            const randomX = Math.floor(Math.random() * (window.innerWidth - naoButton.offsetWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - naoButton.offsetHeight));
+
+            naoButton.style.position = 'absolute';
+            naoButton.style.left = randomX + 'px';
+            naoButton.style.top = randomY + 'px';
+        });</script>
+
+</body>
+
+</html>
